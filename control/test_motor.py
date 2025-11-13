@@ -45,36 +45,44 @@ def test_motor4():
         sleep(1)
         
 
-def wheels_forward(t=3):
+def wheels_forward(speed=70, t=3):
     motor3 = Motor(dirPin=4, PWMPin=5)  # Motor 3 is controlled from Motor Driv2 #1, which is on GP4/5
     motor4 = Motor(dirPin=7, PWMPin=6)
     print('forward')
-    motor3.Forward()
-    motor4.Reverse()
+    motor3.Forward(speed)
+    motor4.Forward(speed)
     sleep(t)
-def wheels_backward(t=3):
+    
+def wheels_backward(speed=70, t=3):
     motor3 = Motor(dirPin=4, PWMPin=5)  # Motor 3 is controlled from Motor Driv2 #1, which is on GP4/5
     motor4 = Motor(dirPin=7, PWMPin=6)
     print('backward')
-    motor3.Reverse()
-    motor4.Forward()
+    motor3.Reverse(speed)
+    motor4.Reverse(speed)
     sleep(t)
     
-def CW(t=3):
+def CW(speed=70, t=3):
     motor3 = Motor(dirPin=4, PWMPin=5)  # Motor 3 is controlled from Motor Driv2 #1, which is on GP4/5
     motor4 = Motor(dirPin=7, PWMPin=6)
     print('CW')
-    motor3.Forward()
-    motor4.Forward()
+    motor3.Reverse(speed)
+    motor4.Forward(speed)
     sleep(t)
     
-def CCW(t=3):
+def CCW(speed=70, t=3):
     motor3 = Motor(dirPin=4, PWMPin=5)  # Motor 3 is controlled from Motor Driv2 #1, which is on GP4/5
     motor4 = Motor(dirPin=7, PWMPin=6)
     print('CCW')
-    motor3.Reverse()
-    motor4.Reverse()
+    motor3.Forward(speed)
+    motor4.Reverse(speed)
     sleep(t)
+    
+def turn_off():
+    motor3 = Motor(dirPin=4, PWMPin=5)  # Motor 3 is controlled from Motor Driv2 #1, which is on GP4/5
+    motor4 = Motor(dirPin=7, PWMPin=6)
+    print('off')
+    motor3.off()
+    motor4.off()
     
 
 

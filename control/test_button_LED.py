@@ -12,9 +12,9 @@ def sensor12(sensor1_pin, sensor2_pin):
     sensor1 = Pin(sensor1_pin, Pin.IN, Pin.PULL_DOWN)
     sensor2 = Pin(sensor2_pin, Pin.IN, Pin.PULL_DOWN)
 #     print(sensor1.value, sensor2.value)
-    return sensor1.value, sensor2.value
+    return sensor1.value(), sensor2.value()
 
 #Continiously update the LED value and print said value
-while True:
-  print(sensor12(12, 13))
-  sleep(0.1)
+# while True:
+#   print(sensor12(12, 13))
+#   sleep(0.1)
