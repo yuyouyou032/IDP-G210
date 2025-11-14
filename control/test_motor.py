@@ -48,7 +48,7 @@ def test_motor4():
 def wheels_forward(speed=70, t=3):
     motor3 = Motor(dirPin=4, PWMPin=5)  # Motor 3 is controlled from Motor Driv2 #1, which is on GP4/5
     motor4 = Motor(dirPin=7, PWMPin=6)
-    print('forward')
+#     print('forward')
     motor3.Forward(speed)
     motor4.Forward(speed)
     sleep(t)
@@ -56,23 +56,23 @@ def wheels_forward(speed=70, t=3):
 def wheels_backward(speed=70, t=3):
     motor3 = Motor(dirPin=4, PWMPin=5)  # Motor 3 is controlled from Motor Driv2 #1, which is on GP4/5
     motor4 = Motor(dirPin=7, PWMPin=6)
-    print('backward')
+#     print('backward')
     motor3.Reverse(speed)
     motor4.Reverse(speed)
     sleep(t)
     
-def CW(speed=70, t=3):
-    motor3 = Motor(dirPin=4, PWMPin=5)  # Motor 3 is controlled from Motor Driv2 #1, which is on GP4/5
+def CCW(speed=70, t=3):
+    motor3 = Motor(dirPin=4, PWMPin=5)  
     motor4 = Motor(dirPin=7, PWMPin=6)
-    print('CW')
+#     print('CW')
     motor3.Reverse(speed)
     motor4.Forward(speed)
     sleep(t)
     
-def CCW(speed=70, t=3):
-    motor3 = Motor(dirPin=4, PWMPin=5)  # Motor 3 is controlled from Motor Driv2 #1, which is on GP4/5
+def CW(speed=70, t=3):
+    motor3 = Motor(dirPin=4, PWMPin=5)  
     motor4 = Motor(dirPin=7, PWMPin=6)
-    print('CCW')
+#     print('CCW')
     motor3.Forward(speed)
     motor4.Reverse(speed)
     sleep(t)
