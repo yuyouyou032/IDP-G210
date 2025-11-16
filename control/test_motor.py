@@ -77,6 +77,16 @@ def CW(speed=70, t=3):
     motor4.Reverse(speed)
     sleep(t)
     
+def left_turn(speed=40, t=0.2):
+    motor_left.off()           
+    motor_right.Forward(speed)  
+    sleep(t)
+
+def right_turn(speed=40, t=0.2):
+    motor_right.off()           
+    motor_left.Forward(speed)  
+    sleep(t)
+    
 def turn_off():
     motor3 = Motor(dirPin=4, PWMPin=5)  # Motor 3 is controlled from Motor Driv2 #1, which is on GP4/5
     motor4 = Motor(dirPin=7, PWMPin=6)
@@ -88,3 +98,4 @@ def turn_off():
 
 # if __name__ == "__main__":
 #     test_motor4()
+
