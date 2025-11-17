@@ -121,10 +121,15 @@ while True:
 # test_input_poll()
 
 
+
+
 # wheels_forward()
 # wheels_backward( )
 # CW()
 # CCW()
+turn_off()
+
+
 turn_off()
 
 
@@ -138,6 +143,9 @@ turn_off()
 # test_tiny_code_reader()
 
 print("main.py Done!")
+
+
+
 
 
 
